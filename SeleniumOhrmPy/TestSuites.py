@@ -13,10 +13,10 @@ TC4 = unittest.TestLoader().loadTestsFromTestCase(MethodTest)
 sanityTestSuit = unittest.TestSuite([TC1,TC2])
 functionalTestSuit = unittest.TestSuite([TC3,TC4])
 masterTestSuit = unittest.TestSuite([TC1,TC2,TC3,TC4])
-
+current = unittest.TestSuite([TC1])
 #unittest.TextTestRunner(verbosity=2).run(masterTestSuit)
 
 # Configure HTMLTestRunner
-runner = HTMLTestRunner(combine_reports=True, output='Test Result')
+runner = HTMLTestRunner(combine_reports=True, output='current Test Result ')
 
-runner.run(masterTestSuit)
+runner.run(current)
