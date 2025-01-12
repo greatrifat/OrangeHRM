@@ -4,6 +4,7 @@ This repository contains automation testing scripts for the OrangeHRM web applic
 
 ## Project Structure
 
+```bash 
 OrangeHRM/
 │
 ├── DataDrivenSeleniumOhrmPy_unittest/
@@ -25,7 +26,7 @@ OrangeHRM/
 │   └── Sample login data for data-driven tests.
 │
 └── README.md
-
+```
 ## Features
 
 - **Data-Driven Testing**: Automates login functionality using data from an Excel file.
