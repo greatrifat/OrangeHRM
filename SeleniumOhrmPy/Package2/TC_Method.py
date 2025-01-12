@@ -1,9 +1,9 @@
 import unittest
-
+import HtmlTestRunner
 class MethodTest(unittest.TestCase):
     def test_methodbyBank(self):
         print("This is method by bank test")
-        self.assertTrue(True)
+        self.assertTrue(False)
     
     def test_methodbyCash(self):
         print("This is method by cash test")
@@ -11,4 +11,4 @@ class MethodTest(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner())
