@@ -17,7 +17,7 @@ currentSuite = unittest.TestSuite([TC1])
 #unittest.TextTestRunner(verbosity=2).run(masterTestSuit)
 
 # Configure HTMLTestRunner
-runner = HTMLTestRunner(output='Test_Results')
+runner = HTMLTestRunner(output='Test_Results_HC')
 
 runner.run(currentSuite)
 print("Report generated in the 'Test_Results' directory.")

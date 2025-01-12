@@ -11,9 +11,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="text-capitalize">Unittest Results</h2>
-                <p class='attribute'><strong>Start Time: </strong>2025-01-12 14:21:52</p>
-                <p class='attribute'><strong>Duration: </strong>21.35 s</p>
-                <p class='attribute'><strong>Summary: </strong>Total: 2, Pass: 1, Fail: 1</p>
+                <p class='attribute'><strong>Start Time: </strong>2025-01-12 16:04:58</p>
+                <p class='attribute'><strong>Duration: </strong>15.60 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 4, Pass: 4</p>
             </div>
         </div>
         <div class="row">
@@ -28,35 +28,40 @@
                     </thead>
                     <tbody>
                         <tr class='success'>
-                            <td class="col-xs-10">test_invalid_login</td>
+                            <td class="col-xs-10">test_invalid_username_invalid_pass</td>
                             <td class="col-xs-1">
                                 <span class="label label-success" style="display:block;width:40px;">Pass</span>
                             </td>
                             <td class="col-xs-1">
                             </td>
                         </tr>
-                        <tr class='danger'>
-                            <td class="col-xs-10">test_valid_login</td>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_invalid_username_valid_pass</td>
                             <td class="col-xs-1">
-                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
                             </td>
                             <td class="col-xs-1">
-                                <button class="btn btn-default btn-xs">View</button>
                             </td>
                         </tr>
-                        <tr style="display:none;">
-                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: False is not true : Dashboard not displayed after valid login.</p><p style="color:maroon;">Traceback (most recent call last):
-  File "E:\Rifat\Project\SQA\OrangeHRM\SeleniumOhrmPy\Package1\TC_LoginTest.py", line 49, in test_valid_login
-    self.assertTrue(self.is_dashboard_displayed(), "Dashboard not displayed after valid login.")
-  File "C:\Users\Md. Robayet Ahasan\AppData\Local\Programs\Python\Python311\Lib\unittest\case.py", line 715, in assertTrue
-    raise self.failureException(msg)
-AssertionError: False is not true : Dashboard not displayed after valid login.
-</p>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_valid_username_invalid_pass</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_valid_username_pass</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3">
-                                Total: 2, Pass: 1, Fail: 1 -- Duration: 21.35 s
+                                Total: 4, Pass: 4 -- Duration: 15.60 s
                             </td>
                         </tr>
                     </tbody>

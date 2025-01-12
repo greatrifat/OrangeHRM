@@ -43,16 +43,28 @@ class LoginTest(unittest.TestCase):
         except:
             return False
 
-    def test_valid_login(self):
+    def test_valid_username_pass(self):
         """Test valid login credentials."""
-        self.login("Admin1", "admin123")
+        self.login("Admin", "admin123")
         self.assertTrue(self.is_dashboard_displayed(), "Dashboard not displayed after valid login.")
 
-    def test_invalid_login(self):
+    def test_valid_username_invalid_pass(self):
+        """Test invalid login credentials."""
+        self.login("Admin", "wrongpass")
+        error_message = self.driver.find_element(By.XPATH, "//p[contains(@class, 'oxd-alert-content-text')]").text
+        self.assertEqual(error_message, "Invalid credentials", "Invalid credentials error message not displayed.")
+
+    def test_invalid_username_valid_pass(self):
         """Test invalid login credentials."""
         self.login("wronguser", "admin123")
         error_message = self.driver.find_element(By.XPATH, "//p[contains(@class, 'oxd-alert-content-text')]").text
-        self.assertEqual(error_message, "Invalid credentials", "Invalid login error message not displayed.")
+        self.assertEqual(error_message, "Invalid credentials", "Invalid credentials error message not displayed.")
+
+    def test_invalid_username_invalid_pass(self):
+        """Test invalid login credentials."""
+        self.login("wronguser", "wrongpass")
+        error_message = self.driver.find_element(By.XPATH, "//p[contains(@class, 'oxd-alert-content-text')]").text
+        self.assertEqual(error_message, "Invalid credentials", "Invalid credentials error message not displayed.")
 
 if __name__ == "__main__":
     unittest.main()
